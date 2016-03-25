@@ -1,0 +1,19 @@
+{
+  "name": "front-end-seed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yannxiao/front-end-seed.git"
+  },
+  "author": "yannxiao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yannxiao/front-end-seed/issues"
+  },
+  "homepage": "https://github.com/yannxiao/front-end-seed#readme"
+}

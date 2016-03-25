@@ -59,8 +59,9 @@ READNE.md 						# 项目说明
 * 本地模拟服务
 * 发布
 
-* [使用FIS3完成以上功能](./docs/build-by-fis3.md)
-* [使用Gulp完成以上功能](./docs/build-by-gulp.md)
+-------------------------------------
+- [使用FIS3完成以上功能](./docs/build-by-fis3.md)
+- [使用Gulp完成以上功能](./docs/build-by-gulp.md)
 
 
 

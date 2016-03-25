@@ -34,7 +34,7 @@ src								# 项目源码
 server 							# 本地server
 |-- app.js
 mock 							# 模拟数据
-|docs 							# 项目文档
+docs 							# 项目文档
 package.json 					# 项目配置
 READNE.md 						# 项目说明
 ```

@@ -1,0 +1,367 @@
+.card {
+	border-radius: 10/64rem;
+	background-color: #fff;
+}
+
+.assets-news,
+.invite-friend {
+	width: 180/64rem;
+	padding: 20/64rem 0 20/64rem 100/64rem;
+
+	.title {
+		padding-bottom: 8/64rem;
+		font-size: 32/64rem;
+		color: #ff6160;
+	}
+
+	.text {
+		line-height: 1;
+		font-size: 24/64rem;
+		color: #585858;
+	}
+}
+
+.assets-news {
+	float: left;
+	background-image: url(./img/icon_wealth_assets.png);
+	background-repeat: no-repeat;
+	background-position: 20/64rem center;
+	background-size: 66/64rem 67/64rem;
+}
+
+.invite-friend {
+	float: right;
+	background-image: url(./img/icon_wealth_invitation.png);
+	background-repeat: no-repeat;
+	background-position: 20/64rem center;
+	background-size: 66/64rem 67/64rem;
+}
+
+.product-detail-box {
+	margin-top: 20/64rem;
+
+	.pb28 {
+		padding-bottom: 28/64rem;
+	}
+
+	.pt28 {
+		padding-top: 28/64rem;
+	}
+
+	.link {
+		color: #ff6160;
+		text-decoration: underline;
+	}
+}
+
+.product-title {
+	display: inline-block;
+	height: 38/64rem;
+	padding-right: 20/64rem;
+	line-height: 38/64rem;
+	font-size: 38/64rem;
+	color: #585858;
+	background-image: url(./img/icon_wealth_enter.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 14/64rem;
+}
+
+.product-detail-main {
+	position: relative;
+	width: 360/64rem;
+	height: 360/64rem;
+	margin: 0 auto;
+	
+	.product-quota {
+		position: absolute;
+		bottom: 120/64rem;
+		width: 100%;
+		text-align: center;
+		font-size: 24/64rem;
+		color: #585858;
+	}
+
+	.product-rate {
+		position: absolute;
+		bottom: 160/64rem;
+		width: 100%;
+		text-align: center;
+		font-size: 90/64rem;
+		color: #ff6160;
+	}
+
+	.product-tip {
+		position: absolute;
+		top: 60/64rem;
+		right: -50/64rem;
+		width: 129/64rem;
+		height: 51/64rem;
+		padding-left: 14/64rem;
+		font-size: 24/64rem;
+		text-align: center;
+		line-height: 51/64rem;
+		color: #fff;
+		background-image: url(./img/btn_wealth_remind.png);
+		background-repeat: no-repeat;
+		background-position: left center;
+		background-size: 143/64rem 51/64rem;
+	}
+
+}
+
+.chart-circle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transform: rotate(47deg);
+	transform: rotate(47deg);
+
+	.track {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 12/64rem solid #f3f3f3;
+		border-radius: 50%;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	
+	.left,
+	.right {
+		position: absolute;
+		top: 0;
+		width: 50%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.left {
+		left: 0;
+	}
+
+	.right {
+		right: 0;
+	}
+	
+	.left-mask,
+	.right-mask {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.left-mask {
+		-webkit-transform-origin: 100% 50%;
+		transform-origin: 100% 50%;
+		-webkit-transform: rotate(-180deg);
+		transform: rotate(-180deg);
+	}
+
+	.right-mask {
+		-webkit-transform-origin: 0% 50%;
+		transform-origin: 0% 50%;
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+
+	.left-inner,
+	.right-inner {
+		width: 200%;
+		height: 100%;
+		border: 12/64rem solid #ff6160;
+		border-radius: 50%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.right-inner {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+.invest-link-box {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 90/64rem;
+	text-align: center;
+
+	.invest-link {
+		display: inline-block;
+		width: 280/64rem;
+		height: 80/64rem;
+		border: none;
+		border-radius: 40/64rem;
+		line-height: 80/64rem;
+		font-size: 30/64rem;
+		color: #fff;
+		background-color: #ff6160;
+	}
+
+	.mask {
+		height: 10/64rem;
+		background-color: #fff;
+	}
+}
+
+.goto-history {
+	position: relative;
+	padding: 20/64rem 0;
+	border-top: 1px solid #e3e3e3;
+	text-align: center;
+	font-size: 26/64rem;
+	color: #585858;
+
+	span {
+		padding-right: 20/64rem;
+		background-image: url(./img/icon_wealth_enter.png);
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size: 12/64rem;
+	}
+}
+
+.pb32 {
+	padding-bottom: 32/64rem;
+}
+
+.pt26 {
+	padding-top: 26/64rem;
+}
+
+.btn-wallet {
+	position: fixed;
+	right: 40/64rem;
+	bottom: 60/64rem;
+	z-index: 99;
+
+	img {
+		width: 95/64rem;
+		height: 98/64rem;
+	}
+}
+
+.period-title {
+	font-size: 30/64rem;
+	color: #585858;
+	padding-bottom: 14/64rem;
+}
+.period-link {
+	position: absolute;
+	right: 46/64rem;
+	font-size: 24/64rem;
+	color: #a7a7a7;
+	height: 56/64rem;
+	width: 98/64rem;
+	line-height: 56/64rem;
+	padding-right: 10/64rem;
+	border: 4/64rem solid #e2e2e2;
+	border-radius: 35/64rem;
+	background-image: url(./img/shouye--xiangqing.png);
+	background-repeat: no-repeat;
+	background-position: 80/64rem 18/64rem;
+	background-size: 10/64rem 18/64rem;
+}
+.line-e3e3e3 {
+	border-radius: 5px;
+	height: 10/64rem;
+	width: 230/64rem;
+	background-color: #e3e3e3;
+}
+.line-ff6160 {
+	border-radius: 5px;
+	height: 10/64rem;
+	width: 0/64rem;
+	background-color: #ff6160;
+	transition: width 1.2s;
+}
+
+.mr80 {
+	margin-right: 75/64rem;
+	.mr10 {
+		margin-right: 10/64rem;		
+		font-size: 14/64rem;
+		color: #ff6160;
+	}
+}
+.invest-part {
+	position: relative;
+	padding: 0 20/64rem 30/64rem 20/64rem;
+
+	.border-top {
+		border-top: 1px solid #e2e2e2;
+	}
+
+}
+.invest-rate {
+	display: inline-block;
+	// margin-right: 40/64rem;
+	font-size: 170/64rem;
+	color: #ff6160;
+	padding-top: 50/64rem;
+
+	.fs156 {
+		font-size: 156/64rem;
+	}
+}
+.invest-tip {
+	position: absolute;
+	top: 70/64rem;
+	right: 54/64rem;
+	width: 109/64rem;
+	height: 39/64rem;
+	background-image: url(./img/suicunsuiqu_icon.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 109/64rem 39/64rem;
+}
+.invest-button-box {
+	position: absolute;
+	left: 0;
+	top: 240/64rem;
+	padding: 0 20/64rem;
+	
+	.invest-text {
+		color: #585858;
+		padding: 20/64rem 0;
+		font-size: 24/64rem;
+
+		.center-text {
+			border-left: 2px solid #e2e2e2;
+			border-right: 2px solid #e2e2e2;
+			padding: 0 40/64rem;
+		}
+		.pr20 {
+			padding-right: 20/64rem;
+		}
+		.pl44 {
+			padding-left: 44/64rem;
+		}
+	}
+	.invest-button {
+		width: 100%;
+		height: 70/64rem;
+		background-color: #ff6160;
+		color: #fff;
+		font-size: 30/64rem;
+		border-radius: 10/64rem;
+		line-height: 70/64rem;
+	}
+}
+.invest-box {
+	height: 440/64rem;
+}
+
+

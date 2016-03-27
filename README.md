@@ -6,8 +6,8 @@
 
 ```js
 src								# 项目源码
-|--	Pages					    # 项目页面目录
-|	|-- Home					# Home页面
+|--	pages					    # 项目页面目录
+|	|-- home					# Home页面
 |	|   |-- index.tpl			# 页面模板
 |	|   |-- index.js 			# 页面逻辑
 |	|   |-- index.less          # 页面样式
@@ -15,22 +15,23 @@ src								# 项目源码
 |	|   |   |-- xx.png  		
 |	|-- index.html				# 入口页
 |	|-- app.js 					# 入口JS
-|	Components					# 组件目录
-|	|-- Loading
+|	components					# 组件目录
+|	|-- loading
 |	|   |-- index.js
 |	|   |-- index.tpl
 |	|   |-- index.less
-|--	Lib							# 第三方开源库，不需要进行语法检查
+|--	lib							# 第三方开源库，不需要进行语法检查
 |	|-- vue    					
 |	|   |-- vue.js
-|	Js 							# 公共JS目录，可直接引用，不需要模块化
+|	js 							# 公共JS目录，可直接引用，不需要模块化
 |	|-- mod.js
 |	|-- watch.js 				
-|	Css 						# 公共CSS目录
+|	css 						# 公共CSS目录
 |	|-- common.less
-|	Img  						# 公共图片目录
+|	img  						# 公共图片目录
 |	|-- logo.png
-|   Utils 						# 工具目录
+|   utils 						# 工具目录
+|   node_modules 				# npm模块
 server 							# 本地server
 |-- app.js
 mock 							# 模拟数据

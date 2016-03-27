@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/yannxiao/front-end-seed/issues"
   },
-  "homepage": "https://github.com/yannxiao/front-end-seed#readme"
+  "homepage": "https://github.com/yannxiao/front-end-seed#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^1.12.14"
+  }
 }

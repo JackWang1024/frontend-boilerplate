@@ -1,3 +1,5 @@
+require('./index.less');
+
 var Vue = require('../../js/vue-plus');
 
 var component = Vue.extend({
@@ -5,9 +7,10 @@ var component = Vue.extend({
 		return {
 		};
 	},
-
-	template: '<div>1111</div>',
+	template: require('./index.tpl'),
 });
+
+
 
 module.exports = {component: component};
 

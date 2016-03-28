@@ -1,5 +1,3 @@
-require('./index.less');
-
 var Vue = require('../../js/vue-plus');
 
 var component = Vue.extend({

@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -15,24 +14,5 @@
   "bugs": {
     "url": "https://github.com/yannxiao/front-end-seed/issues"
   },
-  "homepage": "https://github.com/yannxiao/front-end-seed#readme",
-  "dependencies": {
-    "extract-text-webpack-plugin": "^1.0.1"
-  },
-  "devDependencies": {
-    "css-loader": "^0.23.1",
-    "file-loader": "^0.8.5",
-    "gulp": "^3.9.1",
-    "gulp-rev": "^7.0.0",
-    "gulp-rev-css-url": "^0.1.0",
-    "gulp-util": "^3.0.7",
-    "html-loader": "^0.4.3",
-    "less": "^2.6.1",
-    "less-loader": "^2.2.3",
-    "raw-loader": "^0.5.1",
-    "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7",
-    "webpack": "^1.12.14",
-    "webpack-stream": "^3.1.0"
-  }
+  "homepage": "https://github.com/yannxiao/front-end-seed#readme"
 }

@@ -1,0 +1,57 @@
+@import '../../css/setting';
+
+// ---------------
+// tab-bar start
+// ---------------
+// .tab-bar {
+//     display: flex;
+//     width: 100%;
+//     height: pxToRem(88);
+//     padding-top: pxToRem(6);
+//     padding-bottom: pxToRem(6);
+//     position: fixed;
+//     left: 0;
+//     bottom: 0;
+//     background-color: #FFF;
+
+//     &:before {
+//         @include border-top;
+//     }
+// }
+
+// .tab-bar__item {
+//     flex: 1;
+//     text-align: center;
+    
+// }
+
+// .tab-bar__item-icon {
+//     display: block;
+//     height: pxToRem(58);
+//     background-repeat: no-repeat;
+//     background-size: pxToRem(40);
+//     background-position: center center;
+//     background-image: url(../../img/menu.svg);
+// }
+
+// .tab-bar__item-title {
+//     height: pxToRem(30);
+//     font-size: pxToRem(24);
+//     line-height: pxToRem(30);
+//     color: #8a8a8a;
+// }
+
+// .tab-bar__item_active {
+//     .tab-bar__item-icon {
+//         background-image: url(../../img/menu-2.svg);
+//     }   
+//     .tab-bar__item-title {
+//         color: #1159db;
+//     }
+// }
+// ---------------
+// tab-bar end
+// ---------------
+
+
+

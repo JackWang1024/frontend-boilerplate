@@ -1,0 +1,95 @@
+@import '../../css/setting';
+
+// ---------------
+// listview
+// ---------------
+.listview-wrap {
+    padding-bottom: pxToRem(20);
+}
+
+.listview-content {
+    padding-top: pxToRem(20);
+}
+
+.listview-row {
+    position: relative;
+    display: flex;
+    padding: pxToRem(10) pxToRem(30);
+    border-radius: 3px;
+    background-color: #FFF;
+
+    &:active {
+        background-color: #F0F0F0;
+    }
+
+    &:after {
+        @include border-bottom;
+    }
+}
+
+.listview-row__bd {
+    flex: 1;
+}
+
+.listview-row__title {
+    font-size: pxToRem(30);
+    font-weight: 400;
+}
+
+.listview-row__content {
+    padding: pxToRem(10) 0;
+    font-size: pxToRem(24);
+    line-height: 1.5;
+    color: #757575;
+}
+
+.listview-row__item-name {
+    color: #333;
+}
+
+.listview-search-wrap {
+    height: pxToRem(74);
+}
+
+.listview-search {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    padding: pxToRem(10) 0;
+    // border-top: 2px solid #3385FF;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.2);
+    background-color: #FFF;
+}
+
+.listview-search__bd {
+    width: 80%;
+    height: pxToRem(50);
+    margin: 0 auto;
+    padding: 2px 5px;
+    border-radius: 4px;
+    box-shadow: 0 0 1px 0 rgba(0,0,0,0.2) inset;
+    background-color: #F5F5F5;
+}
+
+.listview-search__input {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.listview-loadmore {
+    padding: pxToRem(20) 0;
+    font-size: pxToRem(24);
+    line-height: 1;
+    text-align: center;
+    color: #585858;
+    background-color: #FFF;
+    -webkit-user-select: none;
+
+    &:active {
+        background-color: #F5F5F5;
+    }
+}

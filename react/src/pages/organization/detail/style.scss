@@ -1,0 +1,61 @@
+@import '../../../css/setting';
+
+.organization-detail-wrap {
+    padding: pxToRem(30);
+}
+
+.org-detail-section {
+    margin-bottom: pxToRem(20);
+    background-color: #FFF;
+}
+
+.org-detail-section__hd {
+    position: relative;
+    padding: pxToRem(10);
+    font-size: pxToRem(28);
+    text-align: center;
+    line-height: 1.5;
+
+    &:after {
+        @include border-bottom;
+    }
+}
+
+.org-detail-item {
+    display: flex;
+    position: relative;
+
+    &:after {
+        @include border-bottom;
+    }
+}
+
+.org-detail-item__title {
+    width: 30%;
+    padding: pxToRem(10) pxToRem(10);
+    text-align: center;
+    font-size: pxToRem(28);
+    line-height: 1.5;
+    align-self: center;
+}
+
+.org-detail-item__content {
+    flex: 1;
+    position: relative;
+    padding: pxToRem(10) pxToRem(10);
+    font-size: pxToRem(28);
+
+    &:before {
+        @include border-left;
+    }
+}
+
+.org-detail-section__ft {
+    display: flex;
+    padding: pxToRem(20);
+
+    .button {
+        flex: 1;
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,42 @@
+$height: 39px;
+
+.tabbar-wrap {
+    padding-bottom: 45px;
+}
+
+.tabbar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    padding: 3px 0;
+    box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.1);
+    background-color: #FFF;
+}
+
+.tabbar-item {
+    flex: 1;
+    height: $height;
+    line-height: $height;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+    color: #8a8a8a;
+}
+
+.tabbar-item-icon {
+    display: block;
+    height: 22px;
+    margin-bottom: 3px; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.tabbar-item-title {
+    height: 14px;
+    font-size: 14px;
+    line-height: 1;
+}

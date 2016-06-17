@@ -1,0 +1,43 @@
+@import '../../css/setting';
+
+
+.form__input {
+    width: 100%;
+    height: pxToRem(60);
+    border: 1px solid #DDD;
+    font-size: pxToRem(28);
+    color: #757575
+}
+
+.form__input_disabled {
+    border: none;
+    background-color: #F5F5F5;
+}
+
+.form__radio-wrap {
+}
+
+.form__radio {
+    margin-right: pxToRem(40);
+    font-size: pxToRem(28);
+    color: #757575;
+}
+
+.form__textarea {
+    width: 100%;
+    height: pxToRem(60);
+    border: 1px solid #DDD;
+}
+
+.form__select {
+    width: 100%;
+    height: pxToRem(40);
+    border: 1px solid #DDD;
+}
+
+.form__text {
+    font-size: pxToRem(24);
+    line-height: 1.5;
+    color: #777;
+    background-color: #F5F5F5;
+}

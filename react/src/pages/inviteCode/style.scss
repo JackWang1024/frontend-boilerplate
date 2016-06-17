@@ -1,0 +1,60 @@
+@import '../../css/setting';
+
+.invite-code-page {
+    padding: pxToRem(30);
+}
+
+.invite-code-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: pxToRem(20);
+    background-color: #FFF;
+
+    .label {
+        width: 50px;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+
+    .input {
+        width: 100px;
+        height: pxToRem(60);
+        padding: 0 5px;
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1) inset;
+        background-color: #F5F5F5;
+    }
+
+    .button {
+        height: pxToRem(60);
+        margin-left: 20px;
+        border: none;
+        font-size: pxToRem(24);
+        color: #FFF;
+        background-color: rgb(51, 133, 255);
+
+        &:active {
+            background-color: darken(#3385ff, 10);
+        }
+    }
+}
+
+.code-list {
+    margin-top: pxToRem(20);
+    background-color: #FFF;
+}
+
+.code-list-item {
+    position: relative;
+    height: pxToRem(40);
+    padding: pxToRem(20) 0;
+    font-size: pxToRem(40);
+    line-height: 1;
+    text-align: center;
+
+    &:after {
+        @include border-bottom;
+    }
+}
+
+

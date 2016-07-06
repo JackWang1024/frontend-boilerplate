@@ -68,6 +68,14 @@ a {
     float: right
 }
 
+.ml-small {
+    margin-left: pxToRem(20);
+}
+
+.pb-small {
+    padding-bottom: pxToRem(20);
+}
+
 .clearfix {
     &:before,
     &:after {
@@ -167,7 +175,24 @@ body {
 }
 
 
+.cell-title {
+    padding: pxToRem(10) pxToRem(30);
+    font-size: pxToRem(24);
+    line-height: 1;
+    color: #585858;
+}
 
-.ml-small {
-    margin-left: pxToRem(20);
+.cell {
+    display: flex;
+    position: relative;
+    padding: pxToRem(20) pxToRem(30);
+    background-color: #FFF;
+    
+    &:after {
+        @include border-bottom;
+    }
+}
+
+.cell-bd {
+    flex: 1
 }

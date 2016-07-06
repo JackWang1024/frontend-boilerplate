@@ -10,7 +10,7 @@ class InviteCode extends Component {
         super(props);
         this.handleClick = this.handleClick.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.num = 0;
+        this.num = 1;
     }
 
     handleClick() {
@@ -29,8 +29,13 @@ class InviteCode extends Component {
                 <div className="">
                     <div className="invite-code-form">
                         <span className="label">数量:</span>
-                        <input className="input" type="text" onChange={this.handleChange} />
-                        <button onClick={this.handleClick} className="button">产生🐻口令</button>
+                        <input 
+                            defaultValue="1"
+                            className="input" 
+                            type="text" 
+                            onChange={this.handleChange} 
+                        />
+                        <button onClick={this.handleClick} className="button">产生熊口令</button>
                     </div>
                 </div>
                 <div className="code-list">
@@ -51,7 +56,7 @@ function mapStateToProps(state, props) {
     const branch = state.organization.entities[branchCode];
     return {
         dataList: state.inviteCode,
-        hostCode: branch ? branch.org.code : ''
+        hostCode: branch && branch.org ? branch.org.code : ''
     };
 }
 

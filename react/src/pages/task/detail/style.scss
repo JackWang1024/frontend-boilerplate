@@ -1,0 +1,14 @@
+@import '../../../css/setting';
+
+.task-detail-page {
+    padding-top: pxToRem(20);
+
+    .btns {
+        display: flex;
+    }
+
+    .button {
+        flex: 1;
+        margin: pxToRem(30);
+    }
+}

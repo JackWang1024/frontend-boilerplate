@@ -59,7 +59,7 @@ function mapStateToProps(state, props) {
     const {ids, entities} = state.course;
     return {
         dataList: ids.map( id => entities[id]),
-        hostCode: branch ? branch.org.code : ''
+        hostCode: branch && branch.org ? branch.org.code : ''
     };
 }
 

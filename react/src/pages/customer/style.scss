@@ -1,0 +1,28 @@
+@import '../../css/setting';
+
+.customer-page {
+    padding-top: pxToRem(30);
+}
+
+.customer-navbar {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #CCC;
+}
+
+.customer-nav {
+    flex: 1;
+    height: pxToRem(50);
+    font-size: pxToRem(28);
+    text-align: center;
+    line-height: pxToRem(50);
+    color: #333;
+    background-color: #FFF;
+    -webkit-user-select: none;
+}
+
+.customer-nav__active {
+    color: #FFF;
+    background-color: #08c;
+}

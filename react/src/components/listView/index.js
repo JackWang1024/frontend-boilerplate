@@ -41,6 +41,7 @@ export default class ListView extends Component {
             dataSource: props.dataSource || []
         };
         this.handleSearch = this.handleSearch.bind(this);
+        this.renderSearchBar = this.renderSearchBar.bind(this);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -58,14 +59,16 @@ export default class ListView extends Component {
     }
 
     renderSearchBar() {
+        const { defaultValue, placeholder } = this.props;
         return (
             <div className="listview-search-wrap">
                 <div className="listview-search">
                     <div className="listview-search__bd">
                         <input 
                             type="text" 
-                            placeholder="搜索..." 
+                            placeholder={placeholder} 
                             onChange={this.handleSearch} 
+                            defaultValue={defaultValue}
                             className="listview-search__input" 
                         />
                     </div>
@@ -95,12 +98,15 @@ ListView.propTypes = {
     renderRow:          PropTypes.func.isRequired,
     onLoadMoreClick:    PropTypes.func,
     onSearch:           PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
-    searchKeys:         PropTypes.array
+    searchKeys:         PropTypes.array,
+    placeholder:        PropTypes.string
 };
 
 ListView.defaultProps = {
     dataSource:         [],
     renderRow:          () => {},
-    onSearch:           true
+    onSearch:           true,
+    placeholder:        '搜索...',
+    defaultValue:       ''
 };
 

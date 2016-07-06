@@ -7,7 +7,12 @@ import {
     UPDATE_COURSE_LIST,
     UPDATE_TEACHER, 
     UPDATE_TEACHER_LIST,
-    UPDATE_INVITE_CODE
+    UPDATE_INVITE_CODE,
+    UPDATE_LOAN_ORDER,
+    UPDATE_TASK_BRANCH_LIST,
+    UPDATE_TASK_HOST_LIST,
+    UPDATE_TASK_HOST,
+    UPDATE_TASK_BRANCH
 } from 'actions/index';
 
 
@@ -148,13 +153,73 @@ function inviteCode(state = [], action) {
 }
 
 
+function loanOrder(state = {}, action) {
+    if (action.type === UPDATE_LOAN_ORDER) {
+        return action.data || {};
+    } else {
+        return state;
+    }
+}
+
+
+function task(state = {
+    hostIds: [],
+    hostEntities: {},
+    branchIds: [],
+    branchEntities: {}
+}, action) {
+    let map, code, entities, ids;
+    switch (action.type) {
+        case UPDATE_TASK_BRANCH_LIST: 
+            map = {}; ids = [];
+            (action.data || []).forEach((item) => {
+                map[item.code] = item;
+                ids.push(item.code);
+            });
+            return Object.assign({}, state, {
+                branchIds: union(state.branchIds, ids),
+                branchEntities: Object.assign({}, state.branchEntities, map)
+            });
+            break;
+        case UPDATE_TASK_HOST_LIST:
+            map = {}; ids = [];
+            (action.data || []).forEach((item) => {
+                map[item.code] = item;
+                ids.push(item.code);
+            });
+            return Object.assign({}, state, {
+                hostIds: union(state.hostIds, ids),
+                hostEntities: Object.assign({}, state.hostEntities, map)
+            });
+            break;
+        case UPDATE_TASK_HOST:
+            code = action.data.code;
+            entities = Object.assign({}, state.hostEntities);
+            entities[code] = Object.assign({}, entities[code] || {}, action.data);
+            return Object.assign({}, state, {hostEntities: entities});
+            break;
+        case UPDATE_TASK_BRANCH:
+            code = action.data.code;
+            entities = Object.assign({}, state.branchEntities);
+            entities[code] = Object.assign({}, entities[code] || {}, action.data);
+            return Object.assign({}, state, {branchEntities: entities});
+            break;
+        default:
+            return state;
+    }
+}
+
+
+
 export default function(state = {}, action) {
     return {
         organization:       organization(state.organization, action),
         plan:               plan(state.plan, action),
         course:             course(state.course, action),
         teacher:            teacher(state.teacher, action),
-        inviteCode:         inviteCode(state.inviteCode, action)
+        inviteCode:         inviteCode(state.inviteCode, action),
+        loanOrder:          loanOrder(state.loanOrder, action),
+        task:               task(state.task, action)
     }
 }
 

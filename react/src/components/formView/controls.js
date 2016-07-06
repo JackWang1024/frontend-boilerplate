@@ -183,7 +183,7 @@ class AreaCascade extends Component {
 
     constructor(props) {
         super(props);
-        const val = props.val;
+        const val = props.val || [];
         this.state = {
             val: val //[130000, 130200, 130203]
         };
@@ -201,6 +201,12 @@ class AreaCascade extends Component {
         const index = cfg[name];
         let nextVal = this.state.val.slice(0);
         nextVal[index] = value;
+        if (index === 0) {
+            nextVal[1] = '';
+            nextVal[2] = '';
+        } else if (index === 1) {
+            nextVal[2] = '';
+        }
         this.setState({ val: nextVal });
         this.props.onChange(e, nextVal, this.props.name);
     }

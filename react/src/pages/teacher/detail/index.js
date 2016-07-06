@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import FormView from 'components/formView';
 import {fetchTeacher} from '../../../js/actions/index';
-import {createTeacherDataList} from './config';
+import {teacherFields, createTeacherDataList} from './config';
 
 class TeacherDetail extends Component {
     constructor(props) {
         super(props);
+        this.renderGridRow = this.renderGridRow.bind(this);
     }
 
     componentWillMount() {
@@ -39,7 +40,9 @@ class TeacherDetail extends Component {
                 <div className="org-detail-section">
                     <h3 className="org-detail-section__hd">教师信息（编号：{id}）</h3>
                     <div>
-                        {teacherDataList.map(this.renderGridRow.bind(this))}
+                        {teacherFields.map(({ name }, i) => {
+                            return this.renderGridRow(teacherDataList[name], i)
+                        })}
                     </div>    
                 </div>
             </div>

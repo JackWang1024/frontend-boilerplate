@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import FormView from 'components/formView';
 import {fetchPlan} from '../../../js/actions/index';
-import {createPlanDataList} from './config';
+import {planFields, createPlanDataList} from './config';
 
 class PlanDetail extends Component {
     constructor(props) {
         super(props);
+        this.renderGridRow = this.renderGridRow.bind(this);
     }
 
     componentWillMount() {
@@ -39,7 +40,9 @@ class PlanDetail extends Component {
                 <div className="org-detail-section">
                     <h3 className="org-detail-section__hd">套餐信息（编号：{id}）</h3>
                     <div>
-                        {planDataList.map(this.renderGridRow.bind(this))}
+                        {planFields.map(({ name }, i) => {
+                            return this.renderGridRow(planDataList[name], i);
+                        })}
                     </div>    
                 </div>
             </div>

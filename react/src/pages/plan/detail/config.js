@@ -1,33 +1,32 @@
 
 function createDataList(config, data) {
-    let dataList = [], cfg;
-    for (let name in config) {
-        cfg = config[name];
-        dataList.push({
-            name:       name,
-            title:      cfg.title,
-            type:       cfg.type,
-            options:    cfg.options,
-            val:        data[name]
+    let dataMap = {};
+    config.map((field, i) => {
+        let name = field.name;
+        dataMap[name] = Object.assign({}, field, {
+            val: data[name]
         });
-    }
-    return dataList;
+    });
+    return dataMap;
 }
 
 
-const config = {
-    // 主机构
-    inst_code: {
-        title: '主机构',
-        type: 'text'
-    },
+export const planFields = [
     // 套餐名称 
-    name: {
+    {
+        name: 'name',
         title: '套餐名称',
         type: 'text'
     },
+    // 主机构
+    {
+        name: 'inst_code',
+        title: '主机构',
+        type: 'text'
+    },
     // 机构是否垫付
-    is_advance: {
+    {
+        name: 'is_advance',
         title: '机构是否垫付',
         type: 'radio',
         options: [
@@ -37,7 +36,8 @@ const config = {
         ]
     },
     // 机构垫付方式
-    advance_way: {
+    {
+        name: 'advance_way',
         title: '机构垫付方式',
         type: 'radio',
         options: [
@@ -46,12 +46,14 @@ const config = {
         ]
     },
     // 机构垫付期数 
-    advance_periods: {
+    {
+        name: 'advance_periods',
         title: '机构垫付期数',
         type: 'text'
     },
     // 还款方式
-    repay_way: {
+    {
+        name: 'repay_way',
         title: '还款方式',
         type: 'radio',
         options: [
@@ -61,40 +63,46 @@ const config = {
         ]
     },
     // 宽限期 
-    grace_periods: {
+    {
+        name: 'grace_periods',
         title: '宽限期',
         type: 'text'
     },
     // 非宽限期 
-    ungrace_periods: {
+    {
+        name: 'ungrace_periods',
         title: '非宽限期',
         type: 'text'
     },
     // 宽限期服务费率(%) 
-    grace_rate: {
+    {
+        name: 'grace_rate',
         title: '宽限期服务费率(%)',
         type: 'text'
     },
     // 非宽限期服务费率(%) 
-    ungrace_rate: {
+    {
+        name: 'ungrace_rate',
         title: '非宽限期服务费率(%) ',
         type: 'text'
     },
     // 贷款利率(%)
-    loan_rate: {
+    {
+        name: 'loan_rate',
         title: '贷款利率(%)',
         type: 'text'
     },
     // 贷款本金(元)[测算用]
-    loan_amt: {
+    {
+        name: 'loan_amt',
         title: '贷款本金(元)[测算用]',
         type: 'text'
     }
-};
+];
 
 
 export function createPlanDataList(data) {
-    return createDataList(config, data);
+    return createDataList(planFields, data);
 }
 
 

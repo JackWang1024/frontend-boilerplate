@@ -1,0 +1,51 @@
+@import '../../../css/setting';
+
+.loan-risk-page {
+    .tr {
+        position: relative;
+        display: flex;
+
+        &:after {
+            @include border-bottom;
+        }
+    }
+
+    .td {
+        position: relative;
+        padding: 10px;
+        text-align: center;
+
+        &:after {
+            @include border-right;
+        }
+    }
+
+    .td-1 {
+        width: 20%;
+    }
+
+    .td-2,
+    .td-3 {
+        flex: 1;
+    }
+
+    .thead .td {
+        color: #000;
+        font-weight: 700;
+        background-color: #F0F0F0;
+    }
+
+    .tbody {
+        .td-3 {
+            color: #757575;
+        }
+    }
+
+    .success {
+        color: green;
+    }
+
+    .failure {
+        color: red;
+    }
+}

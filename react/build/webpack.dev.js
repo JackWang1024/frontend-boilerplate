@@ -6,8 +6,7 @@
 // 4. config.devServer.publicPath = '/';
 //******************************************
 
-// webpack-dev-server 
-//      --config build/webpack.dev.js 
+// webpack-dev-server --config build/webpack.dev.js 
 //      --hot           使用热替换
 //      --deploy        发布到测试机，只发布 HTML 模板文件，css, js 等资源使用本地服务的，
 //                      这样就可以在访问测试机时也可以照常使用热替换、自动刷新功能。

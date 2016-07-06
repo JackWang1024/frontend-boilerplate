@@ -18,6 +18,7 @@ var DIST_PATH = ROOT_PATH + '/dist';
 var DIST_JS = 'static/ddtalk/js';
 var DIST_CSS = 'static/ddtalk/css';
 var SRC_PATH = ROOT_PATH + '/src';
+var CACHE_PATH = ROOT_PATH + '/cache';
 var NODE_MODULES_PATH =  ROOT_PATH + '/node_modules';
 
 var __DEV__ = !(process.env.NODE_ENV === 'production');
@@ -93,14 +94,9 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.js$/,
-				exclude: [
-					NODE_MODULES_PATH
-				],
-				// loader: 'babel',
-				// query: {
-				// 	presets: ['react', 'es2015']
-				// },
-	   			loaders: ['babel?presets[]=react,presets[]=es2015']
+				exclude: /node_modules/,
+				include: SRC_PATH,
+	   			loaders: ['babel?cacheDirectory='+CACHE_PATH]
 			},
 			{
 				test: /\.(scss|css)$/,

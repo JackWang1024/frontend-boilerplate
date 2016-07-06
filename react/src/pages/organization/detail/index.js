@@ -3,8 +3,13 @@ import { connect } from 'react-redux';
 import FormView from 'components/formView';
 import TabBar, { TabBarItem } from 'components/tabBar';
 import { fetchOrganization } from 'actions/index';
-import { createBranchState, createHostState } from './config';
+import { 
+    branchFields, createBranchState, 
+    hostFields, createHostState 
+} from './config';
+
 import './style.scss';
+
 
 
 // 分支机构信息
@@ -50,7 +55,7 @@ class BranchOrganInfo extends Component {
         window.scrollTo(0, 0);
     }
 
-    renderRow(name, i) {
+    renderRow({ name }, i) {
         const disabled = this.state.disabled;
         const item = this.state[name];
 
@@ -74,15 +79,13 @@ class BranchOrganInfo extends Component {
     render() {
         const { oid, info } = this.props;
         const { disabled } = this.state;
-        const dataItems = Object.keys(this.state).slice(1);
-        
         return (    
             <div className="org-detail-section">
                 <h3 className="org-detail-section__hd">
                     分支机构信息（编号：{ oid }）
                 </h3>
                 <div>
-                    { dataItems.map(this.renderRow) }
+                    { branchFields.map(this.renderRow) }
                 </div>
                 <div className="org-detail-section__ft">
                     <a className="button" onClick={this.handleClick}>
@@ -145,7 +148,7 @@ class HostOrganInfo extends Component {
         window.scrollTo(0, 0);
     }
 
-    renderRow(name, i) {
+    renderRow({ name }, i) {
         const disabled = this.state.disabled;
         const item = this.state[name];
         return (
@@ -168,15 +171,13 @@ class HostOrganInfo extends Component {
     render() {
         const { oid, info } = this.props;
         const { disabled } = this.state;
-        const dataItems = Object.keys(this.state).slice(1);
-        
         return (    
             <div className="org-detail-section">
                 <h3 className="org-detail-section__hd">
                     主机构信息（编号：{ info.code }）
                 </h3>
                 <div>
-                    { dataItems.map(this.renderRow) }
+                    { hostFields.map(this.renderRow) }
                 </div>
                 <div className="org-detail-section__ft">
                     <a className="button" onClick={this.handleClick}>
@@ -193,7 +194,7 @@ class HostOrganInfo extends Component {
 function mapStateToProps({ organization }, { oid }) {
     const entities = organization.entities;
     return {
-        info: entities[oid].org
+        info: entities[oid] ? entities[oid].org || {} : {}
     };
 }
 
@@ -208,12 +209,40 @@ import PlanList         from '../../plan';
 import CourseList       from '../../course';
 import TeacherList      from '../../teacher';
 import InviteCode       from '../../inviteCode';
-import Loan             from '../../loan';
+import Loan, { clean }  from '../../loan';
 
 // 当从其他页面返回时，保持显示最后所在的 Tab
 let LAST_ACTIVE_INDEX = 0;
 
-export default class Index extends Component {
+export default React.createClass({
+    contextTypes: {
+        router: React.PropTypes.object.isRequired
+    },
+
+    childContextTypes: {
+        route: React.PropTypes.object
+    },
+
+    getChildContext() {
+        return {
+            route: this.props.route
+        }
+    },
+    
+    componentDidMount() {
+        const { route } = this.props;
+        const { router } = this.context;
+        router.setRouteLeaveHook(route, this.routerWillLeave)
+    },
+
+    routerWillLeave(nextLocation) {
+        // 回到上一页时，重置 LAST_ACTIVE_INDEX
+        if (nextLocation.pathname === '/') {
+            clean();
+            LAST_ACTIVE_INDEX = 0;
+        }
+    },
+
     render() {
         const { id } = this.props.params;
         return (
@@ -246,5 +275,6 @@ export default class Index extends Component {
             </TabBar>
         );
     }
-}
+});
+
 

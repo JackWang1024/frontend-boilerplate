@@ -1,0 +1,29 @@
+@import '../../css/setting';
+
+.ucenter-page {
+    padding: pxToRem(30);
+    text-align: center;
+
+    .c_08c {
+        background-color: #08c;
+    }
+
+    .c_2ecc40 {
+        background-color: #2ecc40;
+    }
+
+    .c_ff851b {
+        background-color: #ff851b;
+    }
+}
+
+.ucenter-cell {
+    display: inline-block;
+    width: pxToRem(200);
+    height: pxToRem(200);
+    margin: pxToRem(30);
+    line-height: pxToRem(200);
+    text-align: center;
+    color: #FFF;
+    background-color: blue;
+}

@@ -44,7 +44,29 @@ var apis = {
     // 熊口令
     inviteCode:         '/teacher/teacherapplykey',
     // 全局搜索
-    globalSearch:       '/advisor/search'
+    globalSearch:       '/advisor/search',
+    // 贷款信息搜索
+    loanSearch:         '/loan/searchloan',
+    // 贷款订单详情
+    loanOrderDetail:    '/loan/loandetail',
+    // 待录入的机构列表
+    taskHostList:       '/advisor/organlist',
+    // 待录入的分支机构列表
+    taskBranchList:     '/advisor/organbranchlist',
+    // 待录入的主机构信息
+    taskHost:           '/advisor/organinstinfo',
+    // 待录入的分支机构信息
+    taskBranch:         '/advisor/organbranchinfo',
+    // 保存修改主机构
+    taskHostSave:       '/advisor/organinstup',
+    // 保存修改分支机构
+    taskBranchSave:     '/advisor/organbranchup',
+    // 添加分支机构
+    taskBranchAdd:      '/advisor/organbranchadd',
+    // 提交审核
+    organReview:        '/advisor/organaudit',
+    // 垫付码
+    dianFuMa:           '/advisor/applykey'
 };
 
 if (!domains[type]) {

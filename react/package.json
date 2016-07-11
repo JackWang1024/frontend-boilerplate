@@ -10,7 +10,8 @@
     "deploy:test": "npm run api test && webpack --config build/webpack.release.js --watch --deploy=test",
     "deploy:online": "npm run api && NODE_ENV=production webpack --config build/webpack.release.js --watch -p --deploy=online",
     "release": "npm run deploy:online",
-    "test": "mocha --opts ./mocha.opts ./src/**/__tests__/*.js"
+    "test": "mocha --opts ./mocha.opts ./src/**/__tests__/*.js",
+    "test-cov": "./node_modules/.bin/istanbul cover _mocha -- ./src/**/__tests__/*.js --opts mocha.opts"
   },
   "author": "xiaoyann",
   "license": "MIT",
@@ -32,6 +33,7 @@
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.19.0",
     "image-webpack-loader": "^1.8.0",
+    "istanbul": "^1.0.0-alpha.2",
     "jsdom": "^9.4.1",
     "less": "^2.6.1",
     "less-loader": "^2.2.3",
